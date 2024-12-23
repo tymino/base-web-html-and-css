@@ -1,6 +1,5 @@
-<script setup lang="ts">
-</script>
+<script setup lang="ts"></script>
 
 <template>
-  <div>Hello Vue</div>
+  <div class="text-3xl text-red-600">Hello Vue</div>
 </template>
