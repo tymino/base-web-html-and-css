@@ -10,23 +10,25 @@ interface IProps {
 const props = defineProps<IProps>()
 
 const colorToTailwind = {
-  black: 'text-black',
-  green: 'text-green',
-  white: 'text-white',
+  black: 'primary',
+  green: 'secondary',
+  white: 'neutral',
 }
 
-const baseStyle = ''
-
 const typeStyle = computed(() => {
+  const baseStyle = `rounded-3xl px-6 py-2 hover:brightness-105 transition border-2 border-${
+    colorToTailwind[props.color]
+  }`
+
   switch (props.view) {
     case 'primary':
-      return `w-[160px] h-[50px] bg-primary-light text-secondary ${
+      return `${baseStyle} shadow-md hover:shadow-none bg-${
         colorToTailwind[props.color]
+      } text-${
+        colorToTailwind[props.color] === 'neutral' ? 'primary' : 'neutral'
       }`
     case 'secondary':
-      return `w-[100px] h-[40px] border border-primary-light text-primary-light ${
-        colorToTailwind[props.color]
-      }`
+      return `${baseStyle} text-${colorToTailwind[props.color]}`
     default:
       return ''
   }
@@ -34,7 +36,7 @@ const typeStyle = computed(() => {
 </script>
 
 <template>
-  <button :class="`${baseStyle} ${typeStyle}`" :type="type">
+  <button :class="typeStyle" :type="type">
     {{ name }}
   </button>
 </template>
