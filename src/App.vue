@@ -6,8 +6,8 @@ import CustomButton from './components/custom-button.vue'
   <div class="text-3xl text-red-600">Hello Vue</div>
   <div class="text-center mt-5 p-2 bg-red-300">
     <h2 class="text-secondary">buttons</h2>
-    <div class="flex flex-row justify-center">
-      <div class="mr-5">
+    <div class="buttons">
+      <div>
         <custom-button
           type="button"
           view="primary"
@@ -64,3 +64,14 @@ import CustomButton from './components/custom-button.vue'
     <p>Hello</p>
   </div>
 </template>
+
+<style lang="scss" scoped>
+.buttons {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+  background: rgb(250, 117, 117);
+}
+</style>

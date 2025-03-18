@@ -9,34 +9,66 @@ interface IProps {
 }
 const props = defineProps<IProps>()
 
-const colorToTailwind = {
-  black: 'primary',
-  green: 'secondary',
-  white: 'neutral',
-}
-
-const typeStyle = computed(() => {
-  const baseStyle = `rounded-3xl px-6 py-2 hover:brightness-105 transition border-2 border-${
-    colorToTailwind[props.color]
-  }`
-
-  switch (props.view) {
-    case 'primary':
-      return `${baseStyle} shadow-md hover:shadow-none bg-${
-        colorToTailwind[props.color]
-      } text-${
-        colorToTailwind[props.color] === 'neutral' ? 'primary' : 'neutral'
-      }`
-    case 'secondary':
-      return `${baseStyle} text-${colorToTailwind[props.color]}`
-    default:
-      return ''
-  }
-})
+const buttonStyle = computed(
+  () => `button button__${props.view}--${props.color}`,
+)
 </script>
 
 <template>
-  <button :class="typeStyle" :type="type">
+  <button :class="buttonStyle" :type="type">
     {{ name }}
   </button>
 </template>
+
+<style lang="scss" scoped>
+@mixin button-primary($textColor, $color) {
+  color: $textColor;
+  background: $color;
+  border-color: $color;
+  box-shadow: 4px 4px 4px var(--cl-shadow);
+}
+
+@mixin button-secondary($color) {
+  color: $color;
+  border-color: $color;
+}
+
+.button {
+  min-width: 120px;
+  padding: 10px 0px;
+  background: transparent;
+  border-radius: 14px;
+  border-style: solid;
+  border-width: 2px;
+
+  font-size: 16px;
+  cursor: pointer;
+
+  &__primary {
+    &--black {
+      @include button-primary(var(--cl-neutral), var(--cl-primary));
+    }
+    &--green {
+      @include button-primary(var(--cl-neutral), var(--cl-secondary));
+    }
+    &--white {
+      @include button-primary(var(--cl-primary), var(--cl-neutral));
+    }
+  }
+  &__secondary {
+    &--black {
+      @include button-secondary(var(--cl-primary));
+    }
+    &--green {
+      @include button-secondary(var(--cl-secondary));
+    }
+    &--white {
+      @include button-secondary(var(--cl-neutral));
+    }
+  }
+
+  &:hover {
+    transform: translateY(1px);
+  }
+}
+</style>

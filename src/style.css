@@ -1,3 +1,10 @@
+:root {
+  --cl-shadow: #00000041;
+  --cl-primary: #000000;
+  --cl-secondary: #00997d;
+  --cl-neutral: #ffffff;
+}
+
 /* Reset CSS */
 * {
   margin: 0;
@@ -8,9 +15,6 @@
 html,
 body {
   font-family: 'Open Sans', sans-serif;
+  font-size: 16px;
   height: 100%;
 }
-
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
