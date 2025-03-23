@@ -21,10 +21,10 @@ const buttonStyle = computed(
 </template>
 
 <style lang="scss" scoped>
-@mixin button-primary($textColor, $color) {
+@mixin button-primary($textColor, $BgColor) {
   color: $textColor;
-  background: $color;
-  border-color: $color;
+  background: $BgColor;
+  border-color: $BgColor;
   box-shadow: 4px 4px 4px var(--cl-shadow);
 }
 
