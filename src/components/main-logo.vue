@@ -1,26 +1,27 @@
 <template>
-  <div>
+  <div class="wrapper">
     <img
+      class="icon"
       src="https://ucarecdn.com/b4157a46-7c83-475d-afd0-e2d490c29bbd/"
       alt="logo"
     />
-    <p>devcloud solutions</p>
+    <p class="text">devcloud solutions</p>
   </div>
 </template>
+
 <style lang="scss" scoped>
-div {
+.wrapper {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 64px;
 
-  img {
+  .icon {
     width: auto;
-    height: 100%;
   }
 
-  p {
-    color: #000000;
+  .text {
+    margin-left: 6px;
+    color: var(--cl-neutral);
     font-size: 20px;
     font-weight: bold;
     text-transform: uppercase;

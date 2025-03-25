@@ -7,6 +7,7 @@ import previewSection from './sections/preview-section.vue'
     <div class="main-section">
       <preview-section />
     </div>
+    <div>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</div>
   </div>
 </template>
 

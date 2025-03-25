@@ -1,8 +1,12 @@
 :root {
-  --cl-shadow: #00000041;
-  --cl-primary: #000000;
-  --cl-secondary: #00997d;
-  --cl-neutral: #ffffff;
+  --color-primary: 0, 0, 0;
+  --color-secondary: 0, 153, 125;
+  --color-neutral: 255, 255, 255;
+
+  --cl-shadow: rgba(var(--color-primary), 0.25);
+  --cl-primary: rgb(var(--color-primary));
+  --cl-secondary: rgb(var(--color-secondary));
+  --cl-neutral: rgb(var(--color-neutral));
 }
 
 /* Reset CSS */
