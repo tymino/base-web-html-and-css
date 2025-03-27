@@ -35,11 +35,11 @@ const buttonStyle = computed(
 
 .button {
   min-width: 120px;
-  padding: 10px 0px;
+  padding: 10px 30px;
   background: transparent;
-  border-radius: 14px;
+  border-radius: 50px;
   border-style: solid;
-  border-width: 2px;
+  border-width: 1px;
 
   font-size: 16px;
   cursor: pointer;
