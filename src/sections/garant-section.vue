@@ -56,7 +56,7 @@ import customButton from '../components/custom-button.vue'
 
 .header {
   position: relative;
-  max-width: 600px;
+  max-width: 530px;
   margin-bottom: 40px;
   font-size: 40px;
   font-weight: bold;
@@ -64,9 +64,8 @@ import customButton from '../components/custom-button.vue'
   &::after {
     content: '”';
     position: absolute;
-    top: 0;
-    right: 0;
-    transform: translate(24px, -24px);
+    top: -26px;
+    right: -54px;
 
     font-family: 'Helvetica Neue', sans-serif;
     color: lightgray;
@@ -76,9 +75,8 @@ import customButton from '../components/custom-button.vue'
   &::before {
     content: '“';
     position: absolute;
-    bottom: 0;
-    left: 0;
-    transform: translate(-20px, 60%);
+    bottom: -86px;
+    left: -40px;
 
     font-family: 'Helvetica Neue', sans-serif;
     color: lightgray;
