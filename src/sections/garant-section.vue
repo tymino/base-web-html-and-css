@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import customButton from '../components/custom-button.vue'
+import titleForSection from '../components/title-for-section.vue'
 </script>
 
 <template>
@@ -10,7 +11,12 @@ import customButton from '../components/custom-button.vue'
       alt="tolpa"
     />
     <div class="description">
-      <div class="header">Гарантируем качество и выполнение в сроки</div>
+      <div class="header">
+        <title-for-section>
+          Гарантируем качество и выполнение в сроки
+        </title-for-section>
+      </div>
+
       <div class="body">
         <p>
           Мы просто умеем разрабатывать то, что нужно. То, что будет работать!
@@ -58,12 +64,10 @@ import customButton from '../components/custom-button.vue'
   position: relative;
   max-width: 530px;
   margin-bottom: 40px;
-  font-size: 40px;
-  font-weight: bold;
 
   &::after {
-    content: '”';
     position: absolute;
+    content: '”';
     top: -26px;
     right: -54px;
 
@@ -73,8 +77,8 @@ import customButton from '../components/custom-button.vue'
   }
 
   &::before {
-    content: '“';
     position: absolute;
+    content: '“';
     bottom: -86px;
     left: -40px;
 
