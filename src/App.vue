@@ -2,6 +2,7 @@
 import previewSection from './sections/preview-section.vue'
 import reviewSection from './sections/review-section.vue'
 import garantSection from './sections/garant-section.vue'
+import servicesSection from './sections/services-section.vue'
 </script>
 
 <template>
@@ -11,6 +12,8 @@ import garantSection from './sections/garant-section.vue'
     <div class="review-section side-padding"><review-section /></div>
 
     <div class="garant-section side-padding"><garant-section /></div>
+
+    <div class="services-section side-padding"><services-section /></div>
 
     <div>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</div>
   </div>

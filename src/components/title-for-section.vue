@@ -1,9 +1,7 @@
-<!-- <script setup lang="ts"></script> -->
+<script setup lang="ts"></script>
 
 <template>
-  <h2 class="title">
-    <slot></slot>
-  </h2>
+  <h2 class="title"><slot></slot></h2>
 </template>
 
 <style lang="scss" scoped>
