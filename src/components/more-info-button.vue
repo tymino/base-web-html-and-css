@@ -46,9 +46,6 @@ defineProps<IProps>()
   justify-content: space-between;
 }
 
-.icon {
-}
-
 .text {
   font-size: 16px;
 
@@ -56,8 +53,5 @@ defineProps<IProps>()
     font-size: 20px;
     text-transform: uppercase;
   }
-}
-
-.arrow {
 }
 </style>

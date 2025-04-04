@@ -53,11 +53,14 @@ const cardInfo = [
 .title {
   margin-top: 6%;
   margin-bottom: 40px;
+  text-align: center;
 }
 
 .card-items {
   display: flex;
   justify-content: space-between;
+  margin: 0 auto;
   width: 100%;
+  max-width: 1400px;
 }
 </style>
