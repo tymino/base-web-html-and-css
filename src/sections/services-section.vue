@@ -53,7 +53,6 @@ const cardInfo = [
 .title {
   margin-top: 6%;
   margin-bottom: 40px;
-  text-align: center;
 }
 
 .card-items {
