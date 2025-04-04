@@ -7,7 +7,7 @@ defineProps<IProps>()
 </script>
 
 <template>
-  <div class="link-container">
+  <a class="link-container" href="#">
     <svg
       class="icon"
       width="36"
@@ -18,7 +18,7 @@ defineProps<IProps>()
     >
       <path
         d="M9.9135 3.44188C12.1623 1.23142 15.0305 0.0106142 18 0C24.0525 0 29.0768 5.12948 29.6235 11.744C33.2055 12.321 36 15.7398 36 19.9357C36 24.542 32.6295 28.2122 28.5457 28.2122H8.50725C3.843 28.2122 0 24.0214 0 18.7688C0 14.2471 2.8485 10.5026 6.6195 9.55366C6.94125 7.34029 8.19 5.13461 9.9135 3.44188ZM11.3827 5.38339C9.6795 7.05817 8.7885 9.07662 8.7885 10.6565V11.8055L7.78725 11.9312C4.644 12.3236 2.25 15.2653 2.25 18.7688C2.25 22.5313 5.0175 25.6474 8.50725 25.6474H28.5457C31.455 25.6474 33.75 23.0519 33.75 19.9357C33.75 16.817 31.455 14.2215 28.5457 14.2215H27.4207V12.9391C27.423 7.2454 23.238 2.56474 18 2.56474C15.5697 2.57581 13.2229 3.57636 11.3827 5.38596V5.38339Z"
-        fill="black"
+        fill="currentColor"
       />
     </svg>
 
@@ -33,10 +33,10 @@ defineProps<IProps>()
     >
       <path
         d="M0.5 6.9191H41.5M41.5 6.9191L30.5 1.21973M41.5 6.9191L30.5 11.4786"
-        stroke="black"
+        stroke="currentColor"
       />
     </svg>
-  </div>
+  </a>
 </template>
 
 <style lang="scss" scoped>
@@ -44,9 +44,17 @@ defineProps<IProps>()
   display: flex;
   align-items: center;
   justify-content: space-between;
+  text-decoration: none;
+  color: var(--cl-primary);
+  transition: color 0.3s ease;
+
+  &:hover {
+    color: var(--cl-secondary);
+  }
 }
 
 .text {
+  margin: 0 20px;
   font-size: 16px;
 
   &.caps {
