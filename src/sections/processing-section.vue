@@ -1,28 +1,34 @@
 <script setup lang="ts">
+import { ref } from 'vue'
+
 import titleForSection from '../components/title-for-section.vue'
 import slidePagination from '../components/slide-pagination.vue'
 import slideContent from '../components/slide-content.vue'
+
+const activeSlide = ref(1)
+
+const switchActiveSlide = (index: number) => (activeSlide.value = index)
 </script>
 
 <template>
   <div class="container">
     <div class="title">
-      <title-for-section>Проекты</title-for-section>
+      <title-for-section>Наш процесс работы</title-for-section>
     </div>
     <div class="content">
       <div class="pagination">
-        <slide-pagination :count="7" :active="1" />
+        <slide-pagination
+          @switch-active="switchActiveSlide"
+          :count="7"
+          :active="activeSlide"
+        />
       </div>
 
       <slide-content
-        imageSrc="https://ucarecdn.com/26b4a8e2-88ae-42b0-81f7-90bcf30ad7ef/"
+        imageSrc="https://ucarecdn.com/5a556d3e-6c7c-4715-9128-e7f2ebe384cb/"
         imageAlt="book"
-        descTitle="Компания по производству фотокниг Fototeca"
-        descBody="Программное решение, автоматизирующее производство изделий – от создания
-        дизайна до выдачи клиенту. Была создана система, которая позволяет
-        профессиональному фотографу – клиенту компании — формировать изделие
-        (фотокнигу) в нужном формате и виде, оплатить и сразу передать заказ в
-        производство."
+        descTitle="1. Мастерская открытий"
+        descBody="Мы придаем первостепенное значение пониманию и документированию входов, предпочтений клиентов, дизайна и брендов. И проясните все открытые моменты, чтобы получить точное и ясное представление о целях как клиентов, так и проекта. Мы работаем в рамках совместного подхода с участием  заинтересованных сторон, чтобы согласовать бизнес-процессы."
       />
     </div>
   </div>
