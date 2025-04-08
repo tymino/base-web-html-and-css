@@ -4,6 +4,7 @@ import reviewSection from './sections/review-section.vue'
 import garantSection from './sections/garant-section.vue'
 import servicesSection from './sections/services-section.vue'
 import projectsSection from './sections/projects-section.vue'
+import processingSection from './sections/processing-section.vue'
 </script>
 
 <template>
@@ -17,6 +18,8 @@ import projectsSection from './sections/projects-section.vue'
     <div class="services-section side-padding"><services-section /></div>
 
     <div class="projects-section side-padding"><projects-section /></div>
+
+    <div class="processing-section side-padding"><processing-section /></div>
 
     <div>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</div>
   </div>

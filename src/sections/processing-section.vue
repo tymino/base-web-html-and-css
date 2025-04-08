@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import titleForSection from '../components/title-for-section.vue'
+import slidePagination from '../components/slide-pagination.vue'
 import slideContent from '../components/slide-content.vue'
-import customButton from '../components/custom-button.vue'
 </script>
 
 <template>
@@ -10,16 +10,9 @@ import customButton from '../components/custom-button.vue'
       <title-for-section>Проекты</title-for-section>
     </div>
     <div class="content">
-      <svg
-        class="arrow arrow-left"
-        width="14"
-        height="26"
-        viewBox="0 0 14 26"
-        fill="none"
-        xmlns="http://www.w3.org/2000/svg"
-      >
-        <path d="M13 25L1 13L13 0.999999" stroke="currentColor" />
-      </svg>
+      <div class="pagination">
+        <slide-pagination :count="7" :active="1" />
+      </div>
 
       <slide-content
         imageSrc="https://ucarecdn.com/26b4a8e2-88ae-42b0-81f7-90bcf30ad7ef/"
@@ -31,24 +24,7 @@ import customButton from '../components/custom-button.vue'
         (фотокнигу) в нужном формате и виде, оплатить и сразу передать заказ в
         производство."
       />
-
-      <svg
-        class="arrow arrow-right"
-        width="14"
-        height="26"
-        viewBox="0 0 14 26"
-        fill="none"
-        xmlns="http://www.w3.org/2000/svg"
-      >
-        <path d="M1 1L13 13L1 25" stroke="currentColor" />
-      </svg>
     </div>
-    <customButton
-      name="Посмотреть все проекты"
-      type="button"
-      view="primary"
-      color="black"
-    />
   </div>
 </template>
 
@@ -63,25 +39,5 @@ import customButton from '../components/custom-button.vue'
 .content {
   display: flex;
   margin: 60px 0;
-}
-
-.arrow {
-  align-self: center;
-  min-width: 14px;
-  color: var(--cl-primary);
-  transition: color 0.3s ease;
-  cursor: pointer;
-
-  &-left {
-    margin-right: 20px;
-  }
-
-  &-right {
-    margin-left: 20px;
-  }
-
-  &:hover {
-    color: var(--cl-secondary);
-  }
 }
 </style>
