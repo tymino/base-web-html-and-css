@@ -5,6 +5,7 @@ import garantSection from './sections/garant-section.vue'
 import servicesSection from './sections/services-section.vue'
 import projectsSection from './sections/projects-section.vue'
 import processingSection from './sections/processing-section.vue'
+import techSection from './sections/tech-section.vue'
 </script>
 
 <template>
@@ -20,6 +21,8 @@ import processingSection from './sections/processing-section.vue'
     <div class="projects-section side-padding"><projects-section /></div>
 
     <div class="processing-section side-padding"><processing-section /></div>
+
+    <div class="tech-section side-padding"><tech-section /></div>
 
     <div>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</div>
   </div>
