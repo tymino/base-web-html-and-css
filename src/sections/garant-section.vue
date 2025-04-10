@@ -44,6 +44,8 @@ import titleForSection from '../components/title-for-section.vue'
 .container {
   display: flex;
   justify-content: space-between;
+  max-width: 1600px;
+  margin: 0 auto;
 }
 .image {
   width: auto;

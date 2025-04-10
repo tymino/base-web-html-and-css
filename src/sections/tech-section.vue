@@ -53,6 +53,7 @@ const iconLinks = [
   gap: 40px;
   margin-top: 60px;
   padding: 0 20px;
+  max-width: 1400px;
 }
 
 .icon {
