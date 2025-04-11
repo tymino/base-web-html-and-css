@@ -7,6 +7,7 @@ import projectsSection from './sections/projects-section.vue'
 import processingSection from './sections/processing-section.vue'
 import techSection from './sections/tech-section.vue'
 import messageSection from './sections/message-section.vue'
+import footerSection from './sections/footer-section.vue'
 </script>
 
 <template>
@@ -27,7 +28,7 @@ import messageSection from './sections/message-section.vue'
 
     <div class="message-section"><message-section /></div>
 
-    <div>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</div>
+    <div class="footer-section side-padding"><footer-section /></div>
   </div>
 </template>
 

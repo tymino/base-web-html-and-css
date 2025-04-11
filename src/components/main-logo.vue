@@ -1,3 +1,7 @@
+<script setup lang="ts">
+defineProps<{ isDark?: boolean }>()
+</script>
+
 <template>
   <div class="wrapper">
     <img
@@ -5,7 +9,7 @@
       src="https://ucarecdn.com/b4157a46-7c83-475d-afd0-e2d490c29bbd/"
       alt="logo"
     />
-    <p class="text">devcloud solutions</p>
+    <p class="text dark" :class="{ dark: isDark }">devcloud solutions</p>
   </div>
 </template>
 
@@ -25,6 +29,10 @@
     font-size: 20px;
     font-weight: bold;
     text-transform: uppercase;
+
+    &.dark {
+      color: var(--cl-primary);
+    }
   }
 }
 </style>
