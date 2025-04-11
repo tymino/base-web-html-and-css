@@ -52,18 +52,29 @@ const cardInfo = {
 }
 
 .name {
+  font-size: 20px;
+  text-transform: uppercase;
 }
 
 .role {
   margin-bottom: 30px;
+  font-size: 18px;
+  font-weight: 300;
 }
 
 .review {
   margin-bottom: 40px;
+  font-size: 16px;
+  font-weight: 300;
 }
 
 .star {
   width: 25px;
   height: 25px;
+}
+
+.date {
+  font-size: 16px;
+  font-weight: 300;
 }
 </style>
