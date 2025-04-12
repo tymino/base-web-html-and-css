@@ -1,5 +1,11 @@
 <script setup lang="ts">
 import mainLogo from '../components/main-logo.vue'
+import contactList from '../components/contact-list.vue'
+
+const phones = ['+7 (727) 334-21-45', '+7 (707) 998-93-90']
+const mails = ['info@devcloud.kz']
+const whatapp = ['Whatsapp']
+const telegram = ['telegram']
 </script>
 
 <template>
@@ -10,15 +16,15 @@ import mainLogo from '../components/main-logo.vue'
     </div>
 
     <div class="column-contacts">
-      <div class="phones">
-        <img src="../assets/phone.svg" alt="phone" />
-        <div>
-          <p>+7 (727) 334-21-45</p>
-          <p>+7 (707) 998-93-90</p>
-        </div>
-      </div>
-      <div class="mail-social">
-        
+      <contact-list srcIcon="phone.svg" :items="phones" />
+      <contact-list srcIcon="letter.svg" :items="mails" />
+      <div class="row">
+        <contact-list srcIcon="whatapp.svg" :items="whatapp" :is-small="true" />
+        <contact-list
+          srcIcon="telegram.svg"
+          :items="telegram"
+          :is-small="true"
+        />
       </div>
     </div>
   </div>
@@ -26,7 +32,10 @@ import mainLogo from '../components/main-logo.vue'
 
 <style lang="scss" scoped>
 .container {
+  display: flex;
+
   margin-top: 130px;
+  padding: 60px 0;
 }
 
 .column-logo {
@@ -35,6 +44,13 @@ import mainLogo from '../components/main-logo.vue'
   margin-bottom: 40px;
 }
 
-.column-phones {
+.column-contacts {
+  .row {
+    display: flex;
+  }
+
+  div:first-child {
+    margin-right: 12px;
+  }
 }
 </style>

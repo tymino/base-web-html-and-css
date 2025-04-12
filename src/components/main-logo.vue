@@ -9,7 +9,7 @@ defineProps<{ isDark?: boolean }>()
       src="https://ucarecdn.com/b4157a46-7c83-475d-afd0-e2d490c29bbd/"
       alt="logo"
     />
-    <p class="text dark" :class="{ dark: isDark }">devcloud solutions</p>
+    <p class="text" :class="{ dark: isDark }">devcloud solutions</p>
   </div>
 </template>
 
